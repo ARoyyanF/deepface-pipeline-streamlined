@@ -391,18 +391,18 @@ def main():
             {
                 'name': 'GhostFaceNet',
                 'alignment_backend': 'mtcnn',
-                'distance_metric': 'euclidean_l2',
+                'distance_metric': 'cosine',
                 'threshold': 0.65,
                 'normalization': 'base'
             }
         ],
         'fallback_conditions': {
-            'max_matches_different_persons': 2,
+            'max_matches_different_persons': 1,
             'min_distance_difference': 0.1,
             'use_threshold': True
         },
         'image_resize': {
-            'enabled': False,
+            'enabled': True,
             'target_size': (224, 224)
         },
         'output': {

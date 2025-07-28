@@ -1,0 +1,39 @@
+create a machine learning face recognition (one to many) pipeline using deepface
+
+
+
+make sure face recognition has customizable parameters like distance calculation, threshold, etc.
+
+
+
+2 python files
+
+generate_embedding.py:
+
+1. get person images from a labeled folder
+
+2. resize image (customizable)
+
+3. augmentation (customizable): brightness variation, lighting angle variation by layering a white spherical object that decays with distance from origin, with location variation of left, right, top, bottom, also variate its intensity
+
+4. face alignment (customizable): mtcnn, mtcnn, mtcnn,
+
+5. face recognition (customizable): Facenet, ArcFace, GhostFaceNet
+
+6. save embedding information of each models to json database
+
+
+
+recognize_faces.py:
+
+1. a list of images to predict from a folder
+
+2. generate the embedding
+
+3. compare with the json database: multi-model setup, where it uses an N amount of face recognition models alongside its face alignment algorithm (customizable), customizable parameters for each model (distance calculation, threshold, etc.), the models are used in a fallback fashion, if one model fails to accurately classify (image doesn't meet distance threshold, more than 2 (customizable) matches of different persons is greater than the distance threshold, or if the distance with the next top match is less than 0.1, this aims to increase robustness in terms of precision), it goes on to the next, if the last fallback model fails, the recognition for said image fails.
+
+4. create a results.json file, documenting what happens in the comparison step for each image
+
+5. create a folder to sort the result, image filename tells the model & distance
+
+refer to the ipynb for similar code implementation.

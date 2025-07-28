@@ -212,6 +212,7 @@ class FaceEmbeddingGenerator:
                         aligned_face = self.align_face(aug_image, backend)
                         
                         # Generate embedding
+                        print(f"Generating embedding for {person_name}/{image_name} with {model_name} using {backend} on augmentation {aug_idx}")
                         embedding = DeepFace.represent(
                             img_path=aligned_face,
                             model_name=model_name,
@@ -284,7 +285,7 @@ def main():
     # Example configuration
     config = {
         'image_resize': {
-            'enabled': True,
+            'enabled': False,
             'target_size': (224, 224),
             'maintain_aspect_ratio': True
         },
@@ -299,8 +300,8 @@ def main():
             'lighting_variation': {
                 'enabled': True,
                 'positions': ['left', 'right', 'top', 'bottom'],
-                'intensity_range': (0.3, 0.8),
-                'num_variations': 10,
+                'intensity_range': (0.3, 0.5),
+                'num_variations': 3,
                 'decay_factor': 0.5
             }
         },
@@ -310,7 +311,8 @@ def main():
             'backends': ['mtcnn']
         },
         'face_recognition': {
-            'models': ['Facenet', 'ArcFace', 'GhostFaceNet'],
+            # 'models': ['Facenet', 'ArcFace', 'GhostFaceNet'],
+            'models': ['Facenet','GhostFaceNet'],
             'normalization': 'base'
         }
     }
