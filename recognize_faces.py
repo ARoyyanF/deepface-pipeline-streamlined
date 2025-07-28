@@ -177,17 +177,18 @@ class FaceRecognizer:
             if len(unique_persons) > 1:
                 return True, f"Multiple persons ({len(unique_persons)}) matched above threshold"
             
-            # Check distance difference with the next best match
-        if len(valid_matches) > 1:
-            best_match = valid_matches[0]
-            second_best_match = valid_matches[1]
-            distance_diff = second_best_match['distance'] - best_match['distance']
-            
-            # Trigger fallback only if the distance is too close AND it's a DIFFERENT person.
-            if distance_diff < fallback_config['min_distance_difference']:
-                if best_match['person'] != second_best_match['person']:
-                    return True, (f"Ambiguous: distance diff ({distance_diff:.3f}) to a different person "
-                                  f"is below minimum ({fallback_config['min_distance_difference']})")
+        # Check distance difference with the next best match
+        if len(matches) > 1:
+            best_match = matches[0]
+            second_best_match = next((m for m in matches[1:] if m['person'] != best_match['person']), None)
+            if second_best_match:
+                distance_diff = second_best_match['distance'] - best_match['distance']
+                
+                # Trigger fallback only if the distance is too close AND it's a DIFFERENT person.
+                if distance_diff < fallback_config['min_distance_difference']:
+                    if best_match['person'] != second_best_match['person']:
+                        return True, (f"Ambiguous: distance diff ({distance_diff:.3f}) to a different person "
+                                    f"is below minimum ({fallback_config['min_distance_difference']})")
         
         return False, "Conditions met"
     
@@ -392,17 +393,17 @@ def main():
                 'name': 'GhostFaceNet',
                 'alignment_backend': 'mtcnn',
                 'distance_metric': 'cosine',
-                'threshold': 0.65,
+                'threshold': 0.50,
                 'normalization': 'base'
             }
         ],
         'fallback_conditions': {
-            'max_matches_different_persons': 1,
+            'max_matches_different_persons': 2,
             'min_distance_difference': 0.1,
             'use_threshold': True
         },
         'image_resize': {
-            'enabled': True,
+            'enabled': False,
             'target_size': (224, 224)
         },
         'output': {

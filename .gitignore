@@ -2,3 +2,5 @@
 __pycache__/
 labeled_faces/
 test_images/
+failed_recognition/
+recognized_faces/

@@ -300,8 +300,8 @@ def main():
             'lighting_variation': {
                 'enabled': True,
                 'positions': ['left', 'right', 'top', 'bottom'],
-                'intensity_range': (0.3, 0.5),
-                'num_variations': 3,
+                'intensity_range': (0.4, 0.8),
+                'num_variations': 4,
                 'decay_factor': 0.5
             }
         },

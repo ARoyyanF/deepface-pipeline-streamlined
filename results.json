@@ -1,0 +1,3276 @@
+{
+  "total_images": 37,
+  "successful": 22,
+  "failed": 15,
+  "config": {
+    "models": [
+      {
+        "name": "Facenet",
+        "alignment_backend": "mtcnn",
+        "distance_metric": "cosine",
+        "threshold": 0.4,
+        "normalization": "base"
+      },
+      {
+        "name": "GhostFaceNet",
+        "alignment_backend": "mtcnn",
+        "distance_metric": "cosine",
+        "threshold": 0.5,
+        "normalization": "base"
+      }
+    ],
+    "fallback_conditions": {
+      "max_matches_different_persons": 2,
+      "min_distance_difference": 0.1,
+      "use_threshold": true
+    },
+    "image_resize": {
+      "enabled": false,
+      "target_size": [
+        224,
+        224
+      ]
+    },
+    "output": {
+      "results_file": "results.json",
+      "output_folder": "recognized_faces",
+      "save_failed": true,
+      "failed_folder": "failed_recognition"
+    }
+  },
+  "results": [
+    {
+      "image": "b1.png",
+      "timestamp": "2025-07-28T12:14:18.587532",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.07659261580617494,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.07659261580617494,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person2",
+              "distance": 0.08180632100958063,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.08671514108704159,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person3",
+              "distance": 0.08990156217868495,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person2",
+              "distance": 0.09118172843012018,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.010) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.6352676754517899,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.6352676754517899,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person1",
+              "distance": 0.6412501885114814,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person1",
+              "distance": 0.6712467906031621,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "huurin",
+              "distance": 0.7173981588335416,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.7289456042248457,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "b2.png",
+      "timestamp": "2025-07-28T12:14:23.957127",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.2340042582618428,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.2340042582618428,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "huurin",
+              "distance": 0.2440781724184401,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person1",
+              "distance": 0.2546541257824073,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "huurin",
+              "distance": 0.265289808229752,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person1",
+              "distance": 0.26734259372080027,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.021) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.6422998483182811,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.6422998483182811,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person2",
+              "distance": 0.6529111084132977,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person2",
+              "distance": 0.6544690489787699,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person2",
+              "distance": 0.6576125670042732,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person2",
+              "distance": 0.6585507911228912,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "b3.png",
+      "timestamp": "2025-07-28T12:14:25.075520",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.43991668704721665,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.43991668704721665,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "huurin",
+              "distance": 0.4454042743573077,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "huurin",
+              "distance": 0.4465323478754063,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "person1",
+              "distance": 0.45131225194381086,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "huurin",
+              "distance": 0.45357844494930555,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 11
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.4"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.3547685172494244,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.3547685172494244,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "huurin",
+              "distance": 0.4155366274190416,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "huurin",
+              "distance": 0.4889302582686028,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "huurin",
+              "distance": 0.49527972924628494,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "huurin",
+              "distance": 0.5302836979527547,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "huurin",
+        "distance": 0.3547685172494244,
+        "original_image": "huurin_1.png",
+        "model": "GhostFaceNet",
+        "confidence": 0.29046296550115125
+      },
+      "success": true
+    },
+    {
+      "image": "e2.jpg",
+      "timestamp": "2025-07-28T12:14:26.237775",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.21882709851464122,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.21882709851464122,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "person2",
+              "distance": 0.22396558151554458,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "person2",
+              "distance": 0.23138092875360938,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "person2",
+              "distance": 0.2497280626256696,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "person2",
+              "distance": 0.25121286028581913,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person2",
+        "distance": 0.21882709851464122,
+        "original_image": "person2_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.45293225371339696
+      },
+      "success": true
+    },
+    {
+      "image": "e3.jpeg",
+      "timestamp": "2025-07-28T12:14:26.813949",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.2888762501637049,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.2888762501637049,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "person2",
+              "distance": 0.2982538594855063,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "person2",
+              "distance": 0.3166930716287978,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "person2",
+              "distance": 0.32181016855407263,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "person2",
+              "distance": 0.33038758162980375,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person2",
+        "distance": 0.2888762501637049,
+        "original_image": "person2_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.27780937459073785
+      },
+      "success": true
+    },
+    {
+      "image": "f1.png",
+      "timestamp": "2025-07-28T12:14:27.148374",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.2833616167915688,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.2833616167915688,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "ayah",
+              "distance": 0.37039539777888086,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.38584812647262434,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "person1",
+              "distance": 0.386699125720941,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "person1",
+              "distance": 0.38896157904132844,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.2833616167915688,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.29159595802107807
+      },
+      "success": true
+    },
+    {
+      "image": "f10.jpg",
+      "timestamp": "2025-07-28T12:14:28.943805",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.13156158472270862,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.13156158472270862,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "ayah",
+              "distance": 0.1336601904927862,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.14702533579495536,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "ayah",
+              "distance": 0.15338526200479652,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "ayah",
+              "distance": 0.15621835800443984,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.13156158472270862,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.6710960381932285
+      },
+      "success": true
+    },
+    {
+      "image": "f11.jpg",
+      "timestamp": "2025-07-28T12:14:29.633088",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.3032092061440135,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.3032092061440135,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "ayah",
+              "distance": 0.30500309437905615,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.3087823113886373,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "ayah",
+              "distance": 0.3265521918639315,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "ayah",
+              "distance": 0.33261462701672906,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.3032092061440135,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.2419769846399663
+      },
+      "success": true
+    },
+    {
+      "image": "f2.png",
+      "timestamp": "2025-07-28T12:14:31.193643",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.3880243559518112,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.3880243559518112,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "ayah",
+              "distance": 0.46710993383416566,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "ayah",
+              "distance": 0.47188829102769525,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "ayah",
+              "distance": 0.4723053862443264,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "ayah",
+              "distance": 0.4805292137371212,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.3880243559518112,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.029939110120472123
+      },
+      "success": true
+    },
+    {
+      "image": "f3.png",
+      "timestamp": "2025-07-28T12:14:31.568362",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.21664125941234946,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.21664125941234946,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "ayah",
+              "distance": 0.217612843447213,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person3",
+              "distance": 0.2197550756477531,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person3",
+              "distance": 0.21995172541365582,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "ayah",
+              "distance": 0.2201167117414351,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.003) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.5866431421649874,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.5866431421649874,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6418854252601067,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6452238250796203,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6596197611646109,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "huurin",
+              "distance": 0.676042618842531,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "f4.png",
+      "timestamp": "2025-07-28T12:14:32.394433",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.07573039188827602,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.07573039188827602,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person1",
+              "distance": 0.0762399952233106,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.07829060055967163,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person1",
+              "distance": 0.07870360427305367,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person1",
+              "distance": 0.07906712173467279,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.018) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.5893840459773243,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.5893840459773243,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person1",
+              "distance": 0.6022885689997535,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person1",
+              "distance": 0.6324028848902994,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person2",
+              "distance": 0.6400201665222438,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person2",
+              "distance": 0.6463413079815403,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "f5.png",
+      "timestamp": "2025-07-28T12:14:33.191848",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.39478205616165873,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.39478205616165873,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "person1",
+              "distance": 0.45333990820131864,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "person1",
+              "distance": 0.45525151241195916,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "person1",
+              "distance": 0.45756174164437624,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.4620396158142933,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.059) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.49321483295018576,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.49321483295018576,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5040584876471104,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5110503591484677,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5383101351592372,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5437329011872484,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.49321483295018576,
+        "original_image": "ayah_1.jpg",
+        "model": "GhostFaceNet",
+        "confidence": 0.01357033409962849
+      },
+      "success": true
+    },
+    {
+      "image": "f6.png",
+      "timestamp": "2025-07-28T12:14:34.028445",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.27618182989731943,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.27618182989731943,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.2833441930092422,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "ayah",
+              "distance": 0.29849888872960106,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "ayah",
+              "distance": 0.30438476293977246,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "ayah",
+              "distance": 0.31252579323004326,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.27618182989731943,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.3095454252567015
+      },
+      "success": true
+    },
+    {
+      "image": "f7.png",
+      "timestamp": "2025-07-28T12:14:34.958061",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.07029242408177327,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.07029242408177327,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.0748762069817761,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person1",
+              "distance": 0.07546940216305609,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person1",
+              "distance": 0.08089505160536004,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person1",
+              "distance": 0.0827834141832351,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.025) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.5110287327687288,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.5110287327687288,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person2",
+              "distance": 0.5204932910949469,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person2",
+              "distance": 0.5208417350624275,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "ayah",
+              "distance": 0.525778295681573,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person2",
+              "distance": 0.5269474981968454,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "f8.png",
+      "timestamp": "2025-07-28T12:14:35.803618",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.23688201748073046,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.23688201748073046,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.23966173321625306,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person1",
+              "distance": 0.24420859394057515,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person1",
+              "distance": 0.26038808875001296,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person1",
+              "distance": 0.267842226696443,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.042) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.5239021858205893,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.5239021858205893,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "ayah",
+              "distance": 0.541190361717179,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5472252568160552,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5579705797777839,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "ayah",
+              "distance": 0.5585885129229768,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "f9.jpg",
+      "timestamp": "2025-07-28T12:14:37.848912",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.12051529327049093,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.12051529327049093,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "ayah",
+              "distance": 0.1559649639762003,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "ayah",
+              "distance": 0.15738489061785743,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "ayah",
+              "distance": 0.15801948661034926,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "ayah",
+              "distance": 0.1583901886241743,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "ayah",
+        "distance": 0.12051529327049093,
+        "original_image": "ayah_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.6987117668237727
+      },
+      "success": true
+    },
+    {
+      "image": "fr1.jpg",
+      "timestamp": "2025-07-28T12:14:39.040656",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.14483989508716422,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.14483989508716422,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "person1",
+              "distance": 0.15537164740428522,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.156167401911668,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.1647007771635125,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person1",
+              "distance": 0.18160809936711697,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.14483989508716422,
+        "original_image": "person1_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.6379002622820895
+      },
+      "success": true
+    },
+    {
+      "image": "frhba1.jpg",
+      "timestamp": "2025-07-28T12:14:53.786752",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.2838786376309461,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.2838786376309461,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.2858484649959837,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.29071398125388126,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "person1",
+              "distance": 0.30574279376999136,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "person1",
+              "distance": 0.3121977171701178,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.074) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.6573578146932659,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.6573578146932659,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "person1",
+              "distance": 0.6600594226322982,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "person1",
+              "distance": 0.6749654850264124,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "person3",
+              "distance": 0.6756302742109486,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "person1",
+              "distance": 0.6765077061057422,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "frhba2.jpg",
+      "timestamp": "2025-07-28T12:15:33.464578",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.18721861108890514,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.18721861108890514,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.19201908722779182,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "person1",
+              "distance": 0.19632758579094367,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "person1",
+              "distance": 0.2013484260894176,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "person1",
+              "distance": 0.20227136223266617,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.18721861108890514,
+        "original_image": "person1_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.5319534722777371
+      },
+      "success": true
+    },
+    {
+      "image": "h1.png",
+      "timestamp": "2025-07-28T12:15:59.582859",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.10573445686969263,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.10573445686969263,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person1",
+              "distance": 0.10896389784833438,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person1",
+              "distance": 0.10974872915029887,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "huurin",
+              "distance": 0.11780538979443367,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person1",
+              "distance": 0.1182221282000071,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.012) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.6023134038300397,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.6023134038300397,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6551646981917574,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6689248597467119,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6778810212268374,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6820964601140621,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "h2.png",
+      "timestamp": "2025-07-28T12:16:00.554566",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.17746134275936232,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.17746134275936232,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person3",
+              "distance": 0.19163886494148863,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person3",
+              "distance": 0.19187762174560574,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person3",
+              "distance": 0.20418699653647143,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person1",
+              "distance": 0.22316544513313952,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.046) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.41044279873086675,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.41044279873086675,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "huurin",
+              "distance": 0.43015336918246805,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "huurin",
+              "distance": 0.4647032720110831,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "huurin",
+              "distance": 0.5049573938127303,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "huurin",
+              "distance": 0.5505449349727822,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "huurin",
+        "distance": 0.41044279873086675,
+        "original_image": "huurin_1.png",
+        "model": "GhostFaceNet",
+        "confidence": 0.1791144025382665
+      },
+      "success": true
+    },
+    {
+      "image": "h3.png",
+      "timestamp": "2025-07-28T12:16:01.633190",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.20836737494423752,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.20836737494423752,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "huurin",
+              "distance": 0.21548719237984804,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "huurin",
+              "distance": 0.2217413538523212,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "huurin",
+              "distance": 0.23437992173162248,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "huurin",
+              "distance": 0.23647994475884482,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "huurin",
+        "distance": 0.20836737494423752,
+        "original_image": "huurin_1.png",
+        "model": "Facenet",
+        "confidence": 0.47908156263940627
+      },
+      "success": true
+    },
+    {
+      "image": "h4.png",
+      "timestamp": "2025-07-28T12:16:01.997352",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.08060282293629872,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.08060282293629872,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person2",
+              "distance": 0.08424234507545247,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person2",
+              "distance": 0.09017215685391822,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person2",
+              "distance": 0.09897248187935137,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person2",
+              "distance": 0.10483983581620449,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.036) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.4530099208668733,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.4530099208668733,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "ayah",
+              "distance": 0.4568493631125363,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "ayah",
+              "distance": 0.45867355974343227,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person3",
+              "distance": 0.48030518667889,
+              "original_image": "person3_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "ayah",
+              "distance": 0.4866741750902177,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.027) to a different person is below minimum (0.1)"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "h5.jpg",
+      "timestamp": "2025-07-28T12:16:03.036998",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "huurin",
+            "distance": 0.22843507812885,
+            "original_image": "huurin_1.png"
+          },
+          "top_matches": [
+            {
+              "person": "huurin",
+              "distance": 0.22843507812885,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "huurin",
+              "distance": 0.2294973692938318,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "huurin",
+              "distance": 0.23531065063717094,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "huurin",
+              "distance": 0.24675010301952327,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            },
+            {
+              "person": "huurin",
+              "distance": 0.24837081648479165,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 11
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "huurin",
+        "distance": 0.22843507812885,
+        "original_image": "huurin_1.png",
+        "model": "Facenet",
+        "confidence": 0.428912304677875
+      },
+      "success": true
+    },
+    {
+      "image": "j1.jpg",
+      "timestamp": "2025-07-28T12:16:04.263924",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.29720324369123485,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.29720324369123485,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "person3",
+              "distance": 0.29847215668859617,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "person3",
+              "distance": 0.29975741260863087,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 11
+            },
+            {
+              "person": "person3",
+              "distance": 0.30650184231020405,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person3",
+              "distance": 0.3081615307049508,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person3",
+        "distance": 0.29720324369123485,
+        "original_image": "person3_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.25699189077191287
+      },
+      "success": true
+    },
+    {
+      "image": "j2.jpeg",
+      "timestamp": "2025-07-28T12:16:05.323930",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.3669202497373433,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.3669202497373433,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "person3",
+              "distance": 0.36808209833243877,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "person3",
+              "distance": 0.37057457939358585,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "person3",
+              "distance": 0.37131475908708444,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "person3",
+              "distance": 0.3769918558451332,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person3",
+        "distance": 0.3669202497373433,
+        "original_image": "person3_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.08269937565664187
+      },
+      "success": true
+    },
+    {
+      "image": "j3.jpeg",
+      "timestamp": "2025-07-28T12:16:05.644385",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.20777227565690715,
+            "original_image": "person3_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.20777227565690715,
+              "original_image": "person3_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            },
+            {
+              "person": "person3",
+              "distance": 0.21450828516798237,
+              "original_image": "person3_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "person3",
+              "distance": 0.22092559232857212,
+              "original_image": "person3_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "person3",
+              "distance": 0.22134189996212816,
+              "original_image": "person3_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "person3",
+              "distance": 0.22703708689619717,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person3",
+        "distance": 0.20777227565690715,
+        "original_image": "person3_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.48056931085773213
+      },
+      "success": true
+    },
+    {
+      "image": "j4.png",
+      "timestamp": "2025-07-28T12:16:08.798310",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.12617166136709757,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.12617166136709757,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person3",
+              "distance": 0.1318201173586251,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person3",
+              "distance": 0.14347135615467832,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.14520821028825104,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person3",
+              "distance": 0.1599326920885158,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.058) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.6188675780125595,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.6188675780125595,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "ayah",
+              "distance": 0.6293512741706644,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.6509256011100061,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.6520838809713949,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "huurin",
+              "distance": 0.6646798717673172,
+              "original_image": "huurin_1.png",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "r1.jpg",
+      "timestamp": "2025-07-28T12:16:09.603254",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.3941087178651569,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.3941087178651569,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "ayah",
+              "distance": 0.40290307559470906,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "ayah",
+              "distance": 0.43138629223045144,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "ayah",
+              "distance": 0.4369488748507019,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "ayah",
+              "distance": 0.44116088524696917,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 3
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.067) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.6389384215157892,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.6389384215157892,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 1
+            },
+            {
+              "person": "person1",
+              "distance": 0.6533214017491854,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "ayah",
+              "distance": 0.6988268875525975,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "ayah",
+              "distance": 0.7099398423290662,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "ayah",
+              "distance": 0.7159073449956351,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "r2.jpg",
+      "timestamp": "2025-07-28T12:16:24.266859",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.25613258229727864,
+            "original_image": "person1_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.25613258229727864,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person1",
+              "distance": 0.2684019365413526,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.286514388949619,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.287703179295672,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person1",
+              "distance": 0.29298698615950747,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.25613258229727864,
+        "original_image": "person1_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.3596685442568034
+      },
+      "success": true
+    },
+    {
+      "image": "r3.jpg",
+      "timestamp": "2025-07-28T12:16:31.446517",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.20457124556876338,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.20457124556876338,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 11
+            },
+            {
+              "person": "person1",
+              "distance": 0.20916158114441763,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "person1",
+              "distance": 0.21310394999674398,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person1",
+              "distance": 0.22073791687136302,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 0
+            },
+            {
+              "person": "person1",
+              "distance": 0.22529427578503813,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.20457124556876338,
+        "original_image": "person1_2.jpg",
+        "model": "Facenet",
+        "confidence": 0.48857188607809154
+      },
+      "success": true
+    },
+    {
+      "image": "r4.jpg",
+      "timestamp": "2025-07-28T12:16:38.718217",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.3004042704300053,
+            "original_image": "person1_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.3004042704300053,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "person1",
+              "distance": 0.3127798757988727,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "person1",
+              "distance": 0.32160471242711375,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            },
+            {
+              "person": "person1",
+              "distance": 0.3240050145580813,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.3258018121688294,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.3004042704300053,
+        "original_image": "person1_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.24898932392498685
+      },
+      "success": true
+    },
+    {
+      "image": "r5.jpg",
+      "timestamp": "2025-07-28T12:16:43.011693",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.2856291662449181,
+            "original_image": "person1_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.2856291662449181,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.2893807153288114,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 12
+            },
+            {
+              "person": "person1",
+              "distance": 0.2925957023827227,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 2
+            },
+            {
+              "person": "person1",
+              "distance": 0.2933130011611922,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person1",
+              "distance": 0.30102584432977075,
+              "original_image": "person1_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            }
+          ],
+          "fallback_triggered": false,
+          "fallback_reason": "Conditions met"
+        }
+      ],
+      "final_result": {
+        "person": "person1",
+        "distance": 0.2856291662449181,
+        "original_image": "person1_1.jpg",
+        "model": "Facenet",
+        "confidence": 0.28592708438770487
+      },
+      "success": true
+    },
+    {
+      "image": "r6.jpg",
+      "timestamp": "2025-07-28T12:16:47.340089",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.4407275893581043,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.4407275893581043,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 5
+            },
+            {
+              "person": "person1",
+              "distance": 0.4408220161995995,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "person1",
+              "distance": 0.4635306636998593,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "person1",
+              "distance": 0.4702252432487217,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 20
+            },
+            {
+              "person": "person1",
+              "distance": 0.4708397936130373,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 4
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.4"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "ayah",
+            "distance": 0.6894406895547562,
+            "original_image": "ayah_1.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "ayah",
+              "distance": 0.6894406895547562,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            },
+            {
+              "person": "person3",
+              "distance": 0.6922087852024926,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person1",
+              "distance": 0.6988176467886812,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "ayah",
+              "distance": 0.7077849718072471,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "ayah",
+              "distance": 0.7175014488560111,
+              "original_image": "ayah_1.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "r7.jpg",
+      "timestamp": "2025-07-28T12:16:56.387599",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.30474189226120374,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.30474189226120374,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.3227764678758661,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person1",
+              "distance": 0.3411499959955939,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person1",
+              "distance": 0.3472271180518518,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person1",
+              "distance": 0.3502230536876293,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.075) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person2",
+            "distance": 0.6932028834110453,
+            "original_image": "person2_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person2",
+              "distance": 0.6932028834110453,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 16
+            },
+            {
+              "person": "person2",
+              "distance": 0.7058634303863248,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person2",
+              "distance": 0.7100271026116378,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.7148816488293066,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person2",
+              "distance": 0.7150315776891968,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "r8.jpg",
+      "timestamp": "2025-07-28T12:17:04.562629",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.16216663510208407,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.16216663510208407,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.16908419784292394,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 13
+            },
+            {
+              "person": "person1",
+              "distance": 0.17772652345189632,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 9
+            },
+            {
+              "person": "person1",
+              "distance": 0.18361159153067586,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person1",
+              "distance": 0.19613177401929893,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 21
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.035) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.6207821547155608,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.6207821547155608,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person3",
+              "distance": 0.6267602836379083,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person3",
+              "distance": 0.63345406674942,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person3",
+              "distance": 0.6458077406897962,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 17
+            },
+            {
+              "person": "person1",
+              "distance": 0.6680983892510739,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    },
+    {
+      "image": "r9.jpg",
+      "timestamp": "2025-07-28T12:17:10.796531",
+      "models_tried": [
+        {
+          "model": "Facenet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.4,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person3",
+            "distance": 0.10657065474607508,
+            "original_image": "person3_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person3",
+              "distance": 0.10657065474607508,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 22
+            },
+            {
+              "person": "person3",
+              "distance": 0.12055031872712563,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 10
+            },
+            {
+              "person": "person2",
+              "distance": 0.12399255481647442,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            },
+            {
+              "person": "person2",
+              "distance": 0.125847593784275,
+              "original_image": "person2_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 18
+            },
+            {
+              "person": "person3",
+              "distance": 0.12601443307036841,
+              "original_image": "person3_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 14
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "Ambiguous: distance diff (0.017) to a different person is below minimum (0.1)"
+        },
+        {
+          "model": "GhostFaceNet",
+          "alignment_backend": "mtcnn",
+          "distance_metric": "cosine",
+          "threshold": 0.5,
+          "total_matches": 184,
+          "best_match": {
+            "person": "person1",
+            "distance": 0.5846399260678057,
+            "original_image": "person1_2.jpg"
+          },
+          "top_matches": [
+            {
+              "person": "person1",
+              "distance": 0.5846399260678057,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 15
+            },
+            {
+              "person": "person1",
+              "distance": 0.5949947539207429,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 7
+            },
+            {
+              "person": "person1",
+              "distance": 0.6036645267655655,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 19
+            },
+            {
+              "person": "person1",
+              "distance": 0.6233599434605723,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 6
+            },
+            {
+              "person": "person1",
+              "distance": 0.6269357916421874,
+              "original_image": "person1_2.jpg",
+              "alignment_backend": "mtcnn",
+              "augmentation_idx": 8
+            }
+          ],
+          "fallback_triggered": true,
+          "fallback_reason": "No matches below threshold 0.5"
+        }
+      ],
+      "final_result": null,
+      "success": false
+    }
+  ]
+}
